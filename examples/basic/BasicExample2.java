@@ -17,6 +17,7 @@ public class BasicExample2 {
 	}
 
 	public BasicExample2() throws Exception {
+		SocketIO.setDefaultSSLSocketFactory(SSLContext.getDefault());
 		SocketIO socket = new SocketIO("http://127.0.0.1:3001/");
 		socket.connect(new IOCallback() {
 			@Override
